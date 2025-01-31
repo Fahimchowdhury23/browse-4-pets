@@ -32,17 +32,46 @@
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/6c3df5d68e.js" crossorigin="anonymous"></script>
 
-    <!-- Google Styles -->
     <style>
+        
+        /* to find out the mistakes - dummy border  */
+
+        /* *{ 
+            outline: 1px dashed tomato;
+            outline-offset: -1px;
+        } */
+
+        /* Google Fonts  */
+
+        .adlam-display {
+            font-family: "ADLaM Display", serif;
+        }
+
+        .sora {
+            font-family: "Sora", serif;
+        }
+
+        /* hover styles  */
+
         .hover-slow:hover {
             transition: 0.25s;
             transform: scale(1.1);
             cursor: pointer;
         }
 
+        .medium:hover {
+            transform: scale(1.25)
+        }
+
+        .big:hover {
+            transform: scale(2);
+        }
+
         .pause:hover {
             animation-play-state: paused;
         }
+
+        /* animation */
 
         .hello {
             animation: hello 2s ease-in-out infinite;
@@ -54,34 +83,13 @@
             }
 
             50% {
-                transform: scale(1.1);
+                transform: scale(1.15);
             }
 
             100% {
                 transform: scale(1);
             }
         }
-
-        .medium:hover {
-            transform: scale(1.25)
-        }
-
-        .big:hover {
-            transform: scale(2);
-        }
-
-        .adlam-display {
-            font-family: "ADLaM Display", serif;
-        }
-
-        .sora {
-            font-family: "Sora", serif;
-        }
-
-        /* *{ 
-            outline: 1px solid red;
-            outline-offset: -1px;
-        } */
     </style>
 
 </head>
@@ -89,7 +97,7 @@
 <body class="">
     <header class="w-full">
 
-        <!-- navbar starts -->
+        <!-- navbar starts here -->
 
         <nav class=" w-full bg-yoghurt md:py-4 mb-10 md:mb-16">
             <section class="sora lg:flex items-center justify-around">
@@ -114,6 +122,7 @@
                     <button class="sora px-5 py-1 bg-yellow rounded-lg text-xl hover-slow">Register</button>
                 </div>
             </section>
+            <hr class="border-[rgb(17,17,17)] md:hidden">
         </nav>
 
         <!-- navbar ends here -->
@@ -122,9 +131,9 @@
 
     <main class="">
 
-        <!-- banner starts  -->
+        <!-- banner starts here -->
 
-        <section class="max-w-screen-xl mx-4 md:mx-auto">
+        <section class="max-w-screen-xl mx-4 md:mx-10 xl:mx-auto">
             <div class=" flex flex-col lg:flex-row">
                 <div class="hello pause space-y-3 md:space-y-5 lg:absolute">
                     <h1 class="adlam-display text-3xl lg:text-5xl">Pamper Your Pet, <br> Because They Deserve <br> the
@@ -143,14 +152,16 @@
             </div>
         </section>
 
-        <!-- banner ends here  -->
+        <!-- banner ends here -->
 
-        <!-- categories section starts  -->
+        <!-- categories section starts here -->
 
-        <section class="mt-36 max-w-screen-xl mx-4 md:mx-auto">
+        <section class="mt-36 max-w-screen-xl mx-4 md:mx-10 xl:mx-auto">
             <h1 class="mb-8 lg:mb-10 adlam-display text-2xl md:text-4xl"> Browse By Categories</h1>
 
-            <section class=" grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 md:gap-4 lg:gap-5">
+        <!-- categories grid layout starts here  -->
+
+            <section class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 md:gap-4 lg:gap-5">
                 <div class="hover-slow py-9 text-center rounded-xl space-y-4 bg-[#F9DF8A]">
                     <div class="flex justify-center">
                         <img class="bg-white rounded-full p-5" src="./c1-assets/dog-cartoon.png" alt="">
@@ -211,13 +222,16 @@
                     </div>
                 </div>
             </section>
+
+        <!-- categories grid layout ends here  -->
+
         </section>
 
         <!-- categories section ends here -->
 
         <!-- Trending Products starts here -->
 
-        <section class="mt-32 md:bg-yoghurt py-4 md:p-28">
+        <section class="mt-16 md:mt-32 md:bg-yoghurt py-4 md:p-10 xl:p-32">
             <h2 class="adlam-display text-2xl mx-4 md:mx-0 md:text-4xl mb-8">Trending Pet Products</h2>
             <section class="flex flex-col mx-4 md:mx-0 md:flex-row gap-6">
                 <div class="hover-slow flex pb-20 bg-[#F9DF8A] rounded-xl relative grow-[1]">
@@ -228,19 +242,19 @@
                         </p>
                         <button class="px-5 py-1 border bg-white rounded-lg">Shop Now</button>
                     </div>
-                    <div class="absolute left-52 bottom-0">
+                    <div class="absolute left-52 md:left-40 xl:left-52 bottom-0">
                         <img class="" src="./c1-assets/cute-pet-small.png" alt="">
                     </div>
                 </div>
 
-                <!-- grid layout  -->
+            <!-- grid layout starts here -->
 
-                <div class="sora grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4 grow-[2]">
+                <div class="sora grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4 xl:grow-[2]">
                     <div class="bg-white border rounded-xl flex items-center gap-2 md:gap-4 p-2 md:p-4 hover-slow">
                         <div class="flex bg-yoghurt p-1 md:p-3 rounded-xl">
                             <img src="./c1-assets/dog-cartoon.png" alt="">
                         </div>
-                        <div class="pr-5">
+                        <div class="xl:pr-5">
                             <div class="flex items-center gap-2">
                                 <i class="fa-regular fa-star"></i>
                                 <p class="">4.5</p>
@@ -249,11 +263,11 @@
                             <p class="font-medium">$39.99</p>
                         </div>
                     </div>
-                    <div class="bg-white border rounded-xl flex gap-4 p-4 hover-slow">
+                    <div class="bg-white border rounded-xl flex items-center gap-2 md:gap-4 p-2 md:p-4 hover-slow">
                         <div class="flex items-center bg-yoghurt p-1 md:p-3 rounded-xl">
                             <img src="./c1-assets/fish-cartoon.png" alt="">
                         </div>
-                        <div class="pr-5">
+                        <div class="xl:pr-5">
                             <div class="flex items-center gap-2">
                                 <i class="fa-regular fa-star"></i>
                                 <p class="">4.0</p>
@@ -262,11 +276,11 @@
                             <p class="font-medium">$39.99</p>
                         </div>
                     </div>
-                    <div class="bg-white border rounded-xl flex gap-4 p-4 hover-slow">
+                    <div class="bg-white border rounded-xl flex items-center gap-2 md:gap-4 p-2 md:p-4 hover-slow">
                         <div class="flex items-center bg-yoghurt p-1 md:p-3 rounded-xl">
                             <img src="./c1-assets/bird-cartoon.png" alt="">
                         </div>
-                        <div class="pr-5">
+                        <div class="xl:pr-5">
                             <div class="flex items-center gap-2">
                                 <i class="fa-regular fa-star"></i>
                                 <p class="">4.5</p>
@@ -275,11 +289,11 @@
                             <p class="font-medium">$39.99</p>
                         </div>
                     </div>
-                    <div class="bg-white border rounded-xl flex gap-4 p-4 hover-slow">
+                    <div class="bg-white border rounded-xl flex items-center gap-2 md:gap-4 p-2 md:p-4 hover-slow">
                         <div class="flex items-center bg-yoghurt p-1 md:p-3 rounded-xl">
                             <img src="./c1-assets/rabbit-cartoon.png" alt="">
                         </div>
-                        <div class="pr-5">
+                        <div class="xl:pr-5">
                             <div class="flex items-center gap-2">
                                 <i class="fa-regular fa-star"></i>
                                 <p class="">4.0</p>
@@ -288,11 +302,11 @@
                             <p class="font-medium">$39.99</p>
                         </div>
                     </div>
-                    <div class="bg-white border rounded-xl flex gap-4 p-4 hover-slow">
+                    <div class="bg-white border rounded-xl flex items-center gap-2 md:gap-4 p-2 md:p-4 hover-slow">
                         <div class="flex items-center bg-yoghurt p-1 md:p-3 rounded-xl">
                             <img src="./c1-assets/bird-cartoon.png" alt="">
                         </div>
-                        <div class="pr-5">
+                        <div class="xl:pr-5">
                             <div class="flex items-center gap-2">
                                 <i class="fa-regular fa-star"></i>
                                 <p class="">4.5</p>
@@ -301,11 +315,11 @@
                             <p class="font-medium">$39.99</p>
                         </div>
                     </div>
-                    <div class="bg-white border rounded-xl flex gap-4 p-4 hover-slow">
+                    <div class="bg-white border rounded-xl flex items-center gap-2 md:gap-4 p-2 md:p-4 hover-slow">
                         <div class="flex items-center bg-yoghurt p-1 md:p-3 rounded-xl">
                             <img src="./c1-assets/pet-couch.png" alt="">
                         </div>
-                        <div class="pr-5">
+                        <div class="xl:pr-5">
                             <div class="flex items-center gap-2">
                                 <i class="fa-regular fa-star"></i>
                                 <p class="">4.0</p>
@@ -314,11 +328,11 @@
                             <p class="font-medium">$39.99</p>
                         </div>
                     </div>
-                    <div class="bg-white border rounded-xl flex gap-4 p-4 hover-slow">
+                    <div class="bg-white border rounded-xl flex items-center gap-2 md:gap-4 p-2 md:p-4 hover-slow">
                         <div class="flex items-center bg-yoghurt p-1 md:p-3 rounded-xl">
                             <img src="./c1-assets/fish-cartoon.png" alt="">
                         </div>
-                        <div class="pr-5">
+                        <div class="xl:pr-5">
                             <div class="flex items-center gap-2">
                                 <i class="fa-regular fa-star"></i>
                                 <p class="">4.5</p>
@@ -327,11 +341,11 @@
                             <p class="font-medium">$39.99</p>
                         </div>
                     </div>
-                    <div class="bg-white border rounded-xl flex gap-4 p-4 hover-slow">
+                    <div class="bg-white border rounded-xl flex items-center gap-2 md:gap-4 p-2 md:p-4 hover-slow">
                         <div class="flex items-center bg-yoghurt p-1 md:p-3 rounded-xl">
                             <img src="./c1-assets/pet-couch.png" alt="">
                         </div>
-                        <div class="pr-5">
+                        <div class="xl:pr-5">
                             <div class="flex items-center gap-2">
                                 <i class="fa-regular fa-star"></i>
                                 <p class="">4.0</p>
@@ -340,11 +354,11 @@
                             <p class="font-medium">$39.99</p>
                         </div>
                     </div>
-                    <div class="bg-white border rounded-xl flex gap-4 p-4 hover-slow">
+                    <div class="bg-white border rounded-xl flex items-center gap-2 md:gap-4 p-2 md:p-4 hover-slow">
                         <div class="flex items-center bg-yoghurt p-1 md:p-3 rounded-xl">
                             <img src="./c1-assets/rabbit-cartoon.png" alt="">
                         </div>
-                        <div class="pr-5">
+                        <div class="xl:pr-5">
                             <div class="flex items-center gap-2">
                                 <i class="fa-regular fa-star"></i>
                                 <p class="">4.5</p>
@@ -354,14 +368,17 @@
                         </div>
                     </div>
                 </div>
+
+            <!-- grid layout ends here -->
+
             </section>
         </section>
 
         <!-- Trending Products ends here  -->
 
-        <!-- Customer Products  -->
+        <!-- Pet Owners  -->
 
-        <section class="max-w-screen-xl mx-auto mt-28">
+        <section class="max-w-screen-xl mx-4 md:mx-10 xl:mx-auto mt-14 md:mt-28">
             <h1 class="adlam-display text-4xl mb-12">Some wonderful pictures from our pet owners:</h1>
             <div class="carousel w-full sm:rounded-sm md:rounded-xl">
                 <div id="slide1" class="carousel-item relative w-full">
@@ -397,44 +414,47 @@
 
         <!-- low price section starts here  -->
 
-        <section class="max-w-screen-xl mx-4 md:mx-auto mt-36">
+        <section class="max-w-screen-xl mx-4 md:mx-10 xl:mx-auto mt-16 md:mt-32">
             <h2 class="adlam-display text-2xl md:text-4xl mb-6 md:mb-8"> Everyday Low Price</h2>
             <p class="sora text-xl md:text-2xl mb-8 md:mb-12">If you love spending time with your pet like this, check
                 out our offer before it’s gone!</p>
             <div class="flex flex-col md:flex-row gap-6">
                 <div
-                    class="flex flex-col md:flex-row items-start md:items-center h-[22rem] md:h-[28rem] rounded-xl bg-gradient-to-r from-[rgb(248,204,251)] to-[rgb(172,210,253)] relative md:static">
-                    <div class="pl-8 pt-9 md:pt-0 md:pl-20 space-y-1 md:space-y-4">
+                    class="flex flex-col md:flex-row items-start md:items-center h-[22rem] xl:h-[28rem] rounded-xl bg-gradient-to-r from-[rgb(248,204,251)] to-[rgb(172,210,253)] relative grow xl:grow-0">
+                    <div class="pl-8 pt-9 md:pt-0 xl:pl-20 space-y-1 md:space-y-4">
                         <p class="hidden md:flex sora text-xl">Under Price</p>
-                        <h3 class="adlam-display text-xl md:text-3xl">Pet Grooming Mitt</h3>
+                        <h3 class="adlam-display text-xl md:text-3xl">Pet Grooming</h3>
                         <p class="hidden md:flex adlam-display text-2xl text-white">(Easy hair removal)</p>
                         <p class="adlam-display text-white text-4xl md:text-black md:text-5xl">$7.99</p>
                     </div>
-                    <div class="absolute left-40 bottom-0 md:static md:left-0 md:bottom-0 ">
-                        <img class="md:w-5/6" src="./c1-assets/cute-dog-mid.png" alt="">
+                    <div class="absolute flex justify-end left-40 md:left-48 xl:left-40 bottom-0 xl:static">
+                        <img class="xl:w-5/6" src="./c1-assets/cute-dog-mid.png" alt="">
                     </div>
                 </div>
 
                 <div
-                    class="flex flex-col md:flex-row h-[23rem] md:h-[28rem] rounded-xl bg-gradient-to-r from-[rgb(255,249,244)] to-[rgb(249,223,138)] relative grow">
+                    class="flex flex-col md:flex-row h-[23rem] md:h-[22rem] xl:h-[28rem] rounded-xl bg-gradient-to-r from-[rgb(255,249,244)] to-[rgb(249,223,138)] relative grow">
                     <div class="pl-12 py-8 md:pt-14 space-y-3">
                         <h3 class="adlam-display text-2xl">T-Shirt for Dogs</h3>
                         <p class="adlam-display text-5xl text-yellow">$7.99</p>
                     </div>
-                    <div class="absolute left-40 md:left-48 top-20">
+                    <div class="absolute left-40 md:left-48 top-[4.5rem] md:top-10">
                         <img class="" src="./c1-assets/cute-pet-mid.png" alt="">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Pawsome Section  -->
+        <!-- low price section ends here  -->
+
+        <!-- Paw-some Section starts here -->
 
         <section class="relative mt-10 mx-4">
             <div
-                class="absolute max-w-screen-xl w-full h-[34rem] md:h-[28rem] rounded-2xl flex flex-col md:flex-row md:gap-16 justify-center md:items-center bg-yoghurt top-6 md:top-14 md:left-[6.5rem]">
+                class="absolute max-w-screen-xl w-full md:w-fit xl:w-full h-[34rem] md:h-[28rem] rounded-2xl flex flex-col md:flex-row md:gap-16 justify-center md:items-center bg-yoghurt top-6 md:top-14 md:left-10 xl:left-[6.5rem]">
                 <div class="flex justify-center mb-4 md:mb-0">
-                    <img class="w-[12rem] h-[15rem] md:w-4/5 md:h-full" src="./c1-assets/cute-pet-mid.png" alt="">
+                    <img class="w-[12rem] h-[15rem] md:w-11/12 xl:w-4/5 md:h-full" src="./c1-assets/cute-pet-mid.png"
+                        alt="">
                 </div>
                 <div class="space-y-3 md:space-y-5 md:h-[16rem]">
                     <div class="space-y-3 md:space-y-5">
@@ -453,14 +473,13 @@
             </div>
         </section>
 
-        <!-- low price section ends here  -->
+        <!-- Paw-some Section ends here -->
 
     </main>
 
-    <!-- footer section starts here  -->
+        <!-- footer section starts here  -->
 
-    <footer class="">
-
+    <footer>
         <section
             class="h-[52rem] md:h-[38rem] bg-[rgba(255,220,38,0.5)] flex flex-col md:flex-row md:justify-between justify-end md:items-end px-4 md:px-28 pb-14 md:pb-28 mt-80 sora space-y-8 ">
             <div class="space-y-6">
@@ -494,7 +513,7 @@
         </section>
     </footer>
 
-    <!-- footer section ends here  -->
+        <!-- footer section ends here  -->
 
 </body>
 

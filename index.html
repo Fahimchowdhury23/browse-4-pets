@@ -34,6 +34,42 @@
 
     <!-- Google Styles -->
     <style>
+        .hover-slow:hover {
+            transition: 0.25s;
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+
+        .pause:hover {
+            animation-play-state: paused;
+        }
+
+        .hello {
+            animation: hello 2s ease-in-out infinite;
+        }
+
+        @keyframes hello {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .medium:hover {
+            transform: scale(1.25)
+        }
+
+        .big:hover {
+            transform: scale(2);
+        }
+
         .adlam-display {
             font-family: "ADLaM Display", serif;
         }
@@ -58,22 +94,24 @@
         <nav class=" w-full bg-yoghurt md:py-4 mb-10 md:mb-16">
             <section class="sora lg:flex items-center justify-around">
                 <div class="justify-between lg:justify-start flex items-center px-4 py-2 md:px-0 md:py-0 md:gap-3">
-                    <img src="./c1-assets/logo-header.png" alt="">
-                    <h1 class="hidden lg:flex text-2xl">Browse<span class="lg:contents text-yellow">4</span>Pets</h1>
+                    <img class="hover-slow medium" src="./c1-assets/logo-header.png" alt="">
+                    <h1 class="hover-slow hidden lg:flex text-2xl">Browse<span
+                            class="lg:contents text-yellow">4</span>Pets</h1>
                     <i class="lg:hidden fa-solid fa-bars"></i>
                 </div>
                 <div class="">
                     <ul class="hidden lg:flex text-xl gap-8">
-                        <li>Find a Pet</li>
-                        <li>Breeds</li>
-                        <li>Contact Us</li>
+                        <li class="hover-slow medium">Find a Pet</li>
+                        <li class="hover-slow medium">Breeds</li>
+                        <li class="hover-slow medium">Contact Us</li>
                     </ul>
                 </div>
-                <div class="hidden lg:flex items-center space-x-2">
-                    <i class="fa-regular fa-bell"></i>
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <button class="sora px-5 py-1 border border-yellow rounded-lg">Login</button>
-                    <button class="sora px-5 py-1 bg-yellow rounded-lg text-xl">Register</button>
+                <div class="hidden lg:flex items-center space-x-3">
+                    <i class="hover-slow medium fa-regular fa-bell"></i>
+                    <i class="hover-slow medium fa-solid fa-magnifying-glass"></i>
+                    <button
+                        class="sora px-5 py-1 border border-yellow text-xl hover:bg-yellow hover:text-white hover:duration-200 rounded-lg">Login</button>
+                    <button class="sora px-5 py-1 bg-yellow rounded-lg text-xl hover-slow">Register</button>
                 </div>
             </section>
         </nav>
@@ -87,8 +125,8 @@
         <!-- banner starts  -->
 
         <section class="max-w-screen-xl mx-4 md:mx-auto">
-            <div class="flex flex-col lg:flex-row">
-                <div class="space-y-3 md:space-y-5 lg:absolute">
+            <div class=" flex flex-col lg:flex-row">
+                <div class="hello pause space-y-3 md:space-y-5 lg:absolute">
                     <h1 class="adlam-display text-3xl lg:text-5xl">Pamper Your Pet, <br> Because They Deserve <br> the
                         Best</h1>
                     <p class="sora lg:text-xl text-[rgba(17,17,17,0.7)]">
@@ -112,8 +150,8 @@
         <section class="mt-36 max-w-screen-xl mx-4 md:mx-auto">
             <h1 class="mb-8 lg:mb-10 adlam-display text-2xl md:text-4xl"> Browse By Categories</h1>
 
-            <section class=" grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 md:gap-4 lg:gap-6">
-                <div class="py-9 text-center rounded-xl space-y-4 bg-[#F9DF8A]">
+            <section class=" grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 md:gap-4 lg:gap-5">
+                <div class="hover-slow py-9 text-center rounded-xl space-y-4 bg-[#F9DF8A]">
                     <div class="flex justify-center">
                         <img class="bg-white rounded-full p-5" src="./c1-assets/dog-cartoon.png" alt="">
                     </div>
@@ -123,7 +161,7 @@
                     </div>
                 </div>
 
-                <div class="py-9 text-center rounded-xl space-y-4 bg-[#F9DF8A]">
+                <div class="hover-slow py-9 text-center rounded-xl space-y-4 bg-[#F9DF8A]">
                     <div class="flex justify-center">
                         <img class="bg-white rounded-full p-5" src="./c1-assets/fish-cartoon.png" alt="">
                     </div>
@@ -133,7 +171,7 @@
                     </div>
                 </div>
 
-                <div class="py-9 text-center rounded-xl space-y-4 bg-[#F9DF8A]">
+                <div class="hover-slow py-9 text-center rounded-xl space-y-4 bg-[#F9DF8A]">
                     <div class="flex justify-center">
                         <img class="bg-white rounded-full p-5" src="./c1-assets/cat-cartoon.png" alt="">
                     </div>
@@ -143,7 +181,7 @@
                     </div>
                 </div>
 
-                <div class="py-9 text-center rounded-xl space-y-4 bg-[#F9DF8A]">
+                <div class="hover-slow py-9 text-center rounded-xl space-y-4 bg-[#F9DF8A]">
                     <div class="flex justify-center">
                         <img class="bg-white rounded-full p-5" src="./c1-assets/bird-cartoon.png" alt="">
                     </div>
@@ -153,7 +191,7 @@
                     </div>
                 </div>
 
-                <div class="py-9 text-center rounded-xl space-y-4 bg-[#F9DF8A]">
+                <div class="hover-slow py-9 text-center rounded-xl space-y-4 bg-[#F9DF8A]">
                     <div class="flex justify-center">
                         <img class="bg-white rounded-full p-5" src="./c1-assets/mouse-cartoon.png" alt="">
                     </div>
@@ -163,7 +201,7 @@
                     </div>
                 </div>
 
-                <div class="py-9 text-center rounded-xl space-y-4 bg-[#F9DF8A]">
+                <div class="hover-slow py-9 text-center rounded-xl space-y-4 bg-[#F9DF8A]">
                     <div class="flex justify-center">
                         <img class="bg-white rounded-full p-5" src="./c1-assets/rabbit-cartoon.png" alt="">
                     </div>
@@ -182,7 +220,7 @@
         <section class="mt-32 md:bg-yoghurt py-4 md:p-28">
             <h2 class="adlam-display text-2xl mx-4 md:mx-0 md:text-4xl mb-8">Trending Pet Products</h2>
             <section class="flex flex-col mx-4 md:mx-0 md:flex-row gap-6">
-                <div class="flex pb-20 bg-[#F9DF8A] rounded-xl relative grow-[1]">
+                <div class="hover-slow flex pb-20 bg-[#F9DF8A] rounded-xl relative grow-[1]">
                     <div class="pl-8 py-8 md:pt-12 space-y-5">
                         <h3 class="adlam-display text-xl md:text-2xl">T-Shirt For Dogs</h3>
                         <p class="sora text-[rgba(17,17,17,0.7)]">Discover a world of treats, <br> toys, and essentials
@@ -198,7 +236,7 @@
                 <!-- grid layout  -->
 
                 <div class="sora grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4 grow-[2]">
-                    <div class="bg-white border rounded-xl flex items-center gap-2 md:gap-4 p-2 md:p-4 ">
+                    <div class="bg-white border rounded-xl flex items-center gap-2 md:gap-4 p-2 md:p-4 hover-slow">
                         <div class="flex bg-yoghurt p-1 md:p-3 rounded-xl">
                             <img src="./c1-assets/dog-cartoon.png" alt="">
                         </div>
@@ -211,7 +249,7 @@
                             <p class="font-medium">$39.99</p>
                         </div>
                     </div>
-                    <div class="bg-white border rounded-xl flex gap-4 p-4">
+                    <div class="bg-white border rounded-xl flex gap-4 p-4 hover-slow">
                         <div class="flex items-center bg-yoghurt p-1 md:p-3 rounded-xl">
                             <img src="./c1-assets/fish-cartoon.png" alt="">
                         </div>
@@ -224,7 +262,7 @@
                             <p class="font-medium">$39.99</p>
                         </div>
                     </div>
-                    <div class="bg-white border rounded-xl flex gap-4 p-4">
+                    <div class="bg-white border rounded-xl flex gap-4 p-4 hover-slow">
                         <div class="flex items-center bg-yoghurt p-1 md:p-3 rounded-xl">
                             <img src="./c1-assets/bird-cartoon.png" alt="">
                         </div>
@@ -237,7 +275,7 @@
                             <p class="font-medium">$39.99</p>
                         </div>
                     </div>
-                    <div class="bg-white border rounded-xl flex gap-4 p-4">
+                    <div class="bg-white border rounded-xl flex gap-4 p-4 hover-slow">
                         <div class="flex items-center bg-yoghurt p-1 md:p-3 rounded-xl">
                             <img src="./c1-assets/rabbit-cartoon.png" alt="">
                         </div>
@@ -250,7 +288,7 @@
                             <p class="font-medium">$39.99</p>
                         </div>
                     </div>
-                    <div class="bg-white border rounded-xl flex gap-4 p-4">
+                    <div class="bg-white border rounded-xl flex gap-4 p-4 hover-slow">
                         <div class="flex items-center bg-yoghurt p-1 md:p-3 rounded-xl">
                             <img src="./c1-assets/bird-cartoon.png" alt="">
                         </div>
@@ -263,7 +301,7 @@
                             <p class="font-medium">$39.99</p>
                         </div>
                     </div>
-                    <div class="bg-white border rounded-xl flex gap-4 p-4">
+                    <div class="bg-white border rounded-xl flex gap-4 p-4 hover-slow">
                         <div class="flex items-center bg-yoghurt p-1 md:p-3 rounded-xl">
                             <img src="./c1-assets/pet-couch.png" alt="">
                         </div>
@@ -276,7 +314,7 @@
                             <p class="font-medium">$39.99</p>
                         </div>
                     </div>
-                    <div class="bg-white border rounded-xl flex gap-4 p-4">
+                    <div class="bg-white border rounded-xl flex gap-4 p-4 hover-slow">
                         <div class="flex items-center bg-yoghurt p-1 md:p-3 rounded-xl">
                             <img src="./c1-assets/fish-cartoon.png" alt="">
                         </div>
@@ -289,7 +327,7 @@
                             <p class="font-medium">$39.99</p>
                         </div>
                     </div>
-                    <div class="bg-white border rounded-xl flex gap-4 p-4">
+                    <div class="bg-white border rounded-xl flex gap-4 p-4 hover-slow">
                         <div class="flex items-center bg-yoghurt p-1 md:p-3 rounded-xl">
                             <img src="./c1-assets/pet-couch.png" alt="">
                         </div>
@@ -302,7 +340,7 @@
                             <p class="font-medium">$39.99</p>
                         </div>
                     </div>
-                    <div class="bg-white border rounded-xl flex gap-4 p-4">
+                    <div class="bg-white border rounded-xl flex gap-4 p-4 hover-slow">
                         <div class="flex items-center bg-yoghurt p-1 md:p-3 rounded-xl">
                             <img src="./c1-assets/rabbit-cartoon.png" alt="">
                         </div>
@@ -321,10 +359,48 @@
 
         <!-- Trending Products ends here  -->
 
+        <!-- Customer Products  -->
+
+        <section class="max-w-screen-xl mx-auto mt-28">
+            <h1 class="adlam-display text-4xl mb-12">Some wonderful pictures from our pet owners:</h1>
+            <div class="carousel w-full sm:rounded-sm md:rounded-xl">
+                <div id="slide1" class="carousel-item relative w-full">
+                    <img src="./c1-assets/pet-1.jpg" class="w-full" />
+                    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                        <a href="#slide4" class="btn btn-circle">❮</a>
+                        <a href="#slide2" class="btn btn-circle glass">❯</a>
+                    </div>
+                </div>
+                <div id="slide2" class="carousel-item relative w-full">
+                    <img src="./c1-assets/pet-2.jpeg" class="w-full" />
+                    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                        <a href="#slide1" class="btn btn-circle">❮</a>
+                        <a href="#slide3" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+                <div id="slide3" class="carousel-item relative w-full">
+                    <img src="./c1-assets/pet-3.jpg" class="w-full" />
+                    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                        <a href="#slide2" class="btn btn-circle btn-neutral">❮</a>
+                        <a href="#slide4" class="btn btn-circle btn-neutral">❯</a>
+                    </div>
+                </div>
+                <div id="slide4" class="carousel-item relative w-full">
+                    <img src="./c1-assets/pet-4.jpg" class="w-full" />
+                    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                        <a href="#slide3" class="btn btn-circle glass">❮</a>
+                        <a href="#slide1" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- low price section starts here  -->
 
         <section class="max-w-screen-xl mx-4 md:mx-auto mt-36">
-            <h2 class="adlam-display text-2xl md:text-4xl mb-12"> Everyday Low Price</h2>
+            <h2 class="adlam-display text-2xl md:text-4xl mb-6 md:mb-8"> Everyday Low Price</h2>
+            <p class="sora text-xl md:text-2xl mb-8 md:mb-12">If you love spending time with your pet like this, check
+                out our offer before it’s gone!</p>
             <div class="flex flex-col md:flex-row gap-6">
                 <div
                     class="flex flex-col md:flex-row items-start md:items-center h-[22rem] md:h-[28rem] rounded-xl bg-gradient-to-r from-[rgb(248,204,251)] to-[rgb(172,210,253)] relative md:static">
@@ -355,7 +431,8 @@
         <!-- Pawsome Section  -->
 
         <section class="relative mt-10 mx-4">
-            <div class="absolute max-w-screen-xl w-full h-[34rem] md:h-[28rem] rounded-2xl flex flex-col md:flex-row md:gap-16 justify-center md:items-center bg-yoghurt top-6 md:top-14 md:left-[6.5rem]">
+            <div
+                class="absolute max-w-screen-xl w-full h-[34rem] md:h-[28rem] rounded-2xl flex flex-col md:flex-row md:gap-16 justify-center md:items-center bg-yoghurt top-6 md:top-14 md:left-[6.5rem]">
                 <div class="flex justify-center mb-4 md:mb-0">
                     <img class="w-[12rem] h-[15rem] md:w-4/5 md:h-full" src="./c1-assets/cute-pet-mid.png" alt="">
                 </div>
@@ -370,7 +447,7 @@
                             class="rounded-lg py-3 pl-3 pr-40 md:pr-60 text-[rgb(196,196,196)]" type="email" name=""
                             id=""> <br>
                         <button
-                            class="text-center md:text-start sora px-5 py-1 bg-yellow rounded-lg text-xl">Subscribe</button>
+                            class="text-center md:text-start sora px-5 py-1 bg-yellow rounded-lg text-xl hover-slow">Subscribe</button>
                     </div>
                 </div>
             </div>
@@ -388,8 +465,8 @@
             class="h-[52rem] md:h-[38rem] bg-[rgba(255,220,38,0.5)] flex flex-col md:flex-row md:justify-between justify-end md:items-end px-4 md:px-28 pb-14 md:pb-28 mt-80 sora space-y-8 ">
             <div class="space-y-6">
                 <div class="flex items-center space-x-3">
-                    <img src="./c1-assets/logo-footer.png" alt="">
-                    <h1 class="text-2xl">Browse<span class="text-yellow">4</span>Pets</h1>
+                    <img class="hover-slow medium" src="./c1-assets/logo-footer.png" alt="">
+                    <h1 class="hover-slow text-2xl">Browse<span class="text-yellow">4</span>Pets</h1>
                 </div>
                 <div>
                     <p class="text-[rgba(17,17,17,0.7)] md:text-xl">Discover a world of treats, toys, and <br>
@@ -399,19 +476,19 @@
 
             <div>
                 <ul class="text-xl space-y-5 md:space-y-8">
-                    <li>Find a pet</li>
-                    <li>Breeds</li>
-                    <li>Contact us</li>
+                    <li class="hover-slow medium">Find a pet</li>
+                    <li class="hover-slow medium">Breeds</li>
+                    <li class="hover-slow medium">Contact us</li>
                 </ul>
             </div>
 
             <div class="space-y-2">
                 <h3 class="font-medium">Follow Us</h3>
-                <div class="space-x-4">
-                    <i class="fa-brands fa-facebook"></i>
-                    <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-linkedin-in"></i>
-                    <i class="fa-brands fa-youtube"></i>
+                <div class="space-x-4 md:space-x-3">
+                    <i class="hover-slow big fa-brands fa-facebook"></i>
+                    <i class="hover-slow big fa-brands fa-instagram"></i>
+                    <i class="hover-slow big fa-brands fa-linkedin-in"></i>
+                    <i class="hover-slow big fa-brands fa-youtube"></i>
                 </div>
             </div>
         </section>

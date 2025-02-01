@@ -11,48 +11,15 @@
 
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        yellow: '#ffdc26',
-                        yoghurt: 'rgb(255,249,244)',
-                    }
-                }
-            }
-        }
-    </script>
 
-    <!-- Google Fonts and Font Awesome CDN  -->
+    <!-- tailwind utilities  -->
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Sora:wght@100..800&display=swap"
-        rel="stylesheet">
-    <script src="https://kit.fontawesome.com/6c3df5d68e.js" crossorigin="anonymous"></script>
+    <style type="text/tailwindcss">
 
-    <style>
-        
-        /* to find out the mistakes - dummy border  */
-
-        /* *{ 
-            outline: 1px dashed tomato;
-            outline-offset: -1px;
-        } */
-
-        /* Google Fonts  */
-
-        .adlam-display {
-            font-family: "ADLaM Display", serif;
-        }
-
-        .sora {
-            font-family: "Sora", serif;
-        }
+        @layer utilities {
 
         /* hover styles  */
-
+             
         .hover-slow:hover {
             transition: 0.25s;
             transform: scale(1.1);
@@ -71,24 +38,56 @@
             animation-play-state: paused;
         }
 
-        /* animation */
-
-        .hello {
-            animation: hello 2s ease-in-out infinite;
         }
 
-        @keyframes hello {
-            0% {
-                transform: scale(1);
-            }
+      </style>
 
-            50% {
-                transform: scale(1.15);
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        yellow: '#ffdc26',
+                        yoghurt: 'rgb(255,249,244)',
+                    },
+                    keyframes: {
+                        'hello': {
+                            '0%,100%': { transform: 'scale(1)' },
+                            '50%': { transform: 'scale(1.15)' },
+                        }
+                    },
+                    animation: {
+                        'hello': 'hello 2s ease-in-out infinite'
+                    },
+                    }
+                }
             }
+    </script>
 
-            100% {
-                transform: scale(1);
-            }
+    <!-- Google Fonts and Font Awesome CDN  -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Sora:wght@100..800&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6c3df5d68e.js" crossorigin="anonymous"></script>
+
+    <style>
+        /* to find out the mistakes - dummy border  */
+
+        /* *{ 
+            outline: 1px dashed tomato;
+            outline-offset: -1px;
+        } */
+
+        /* Google Fonts  */
+
+        .adlam-display {
+            font-family: "ADLaM Display", serif;
+        }
+
+        .sora {
+            font-family: "Sora", serif;
         }
     </style>
 
@@ -135,7 +134,7 @@
 
         <section class="max-w-screen-xl mx-4 md:mx-10 xl:mx-auto">
             <div class=" flex flex-col lg:flex-row">
-                <div class="hello pause space-y-3 md:space-y-5 lg:absolute">
+                <div class="animate-pulse lg:animate-bounce xl:animate-hello pause space-y-3 md:space-y-5 lg:absolute">
                     <h1 class="adlam-display text-3xl lg:text-5xl">Pamper Your Pet, <br> Because They Deserve <br> the
                         Best</h1>
                     <p class="sora lg:text-xl text-[rgba(17,17,17,0.7)]">
@@ -159,7 +158,7 @@
         <section class="mt-36 max-w-screen-xl mx-4 md:mx-10 xl:mx-auto">
             <h1 class="mb-8 lg:mb-10 adlam-display text-2xl md:text-4xl"> Browse By Categories</h1>
 
-        <!-- categories grid layout starts here  -->
+            <!-- categories grid layout starts here  -->
 
             <section class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 md:gap-4 lg:gap-5">
                 <div class="hover-slow py-9 text-center rounded-xl space-y-4 bg-[#F9DF8A]">
@@ -223,7 +222,7 @@
                 </div>
             </section>
 
-        <!-- categories grid layout ends here  -->
+            <!-- categories grid layout ends here  -->
 
         </section>
 
@@ -247,7 +246,7 @@
                     </div>
                 </div>
 
-            <!-- grid layout starts here -->
+                <!-- grid layout starts here -->
 
                 <div class="sora grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4 xl:grow-[2]">
                     <div class="bg-white border rounded-xl flex items-center gap-2 md:gap-4 p-2 md:p-4 hover-slow">
@@ -369,7 +368,7 @@
                     </div>
                 </div>
 
-            <!-- grid layout ends here -->
+                <!-- grid layout ends here -->
 
             </section>
         </section>
@@ -464,8 +463,7 @@
                     </div>
                     <div class="flex flex-col items-center md:items-start ">
                         <input placeholder="Enter Email..."
-                            class="rounded-lg py-3 pl-3 pr-40 md:pr-60 text-[rgb(196,196,196)]" type="email" name=""
-                            id=""> <br>
+                            class="rounded-lg py-3 pl-3 pr-32 md:pr-60 text-[rgb(196,196,196)]" type="email" name="" id=""> <br>
                         <button
                             class="text-center md:text-start sora px-5 py-1 bg-yellow rounded-lg text-xl hover-slow">Subscribe</button>
                     </div>
@@ -477,7 +475,7 @@
 
     </main>
 
-        <!-- footer section starts here  -->
+    <!-- footer section starts here  -->
 
     <footer>
         <section
@@ -495,9 +493,9 @@
 
             <div>
                 <ul class="text-xl space-y-5 md:space-y-8">
-                    <li class="hover-slow medium">Find a pet</li>
-                    <li class="hover-slow medium">Breeds</li>
-                    <li class="hover-slow medium">Contact us</li>
+                    <li class="md:hover-slow md:medium">Find a pet</li>
+                    <li class="md:hover-slow md:medium">Breeds</li>
+                    <li class="md:hover-slow md:medium">Contact us</li>
                 </ul>
             </div>
 
@@ -513,7 +511,7 @@
         </section>
     </footer>
 
-        <!-- footer section ends here  -->
+    <!-- footer section ends here  -->
 
 </body>
 
